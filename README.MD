@@ -1,10 +1,9 @@
 # SSH Keys Module
 
 Forked from nightfly19/puppet-ssh_keys
-
-Changes:
-##### 1. Update README for hieradata config example
-##### 2. Fix ssh_dir for root directory
+###### Changes:
+1. Update README for hieradata config example
+2. Fix ssh_dir for root directory
 
 A concat based ssh authorized_keys management solution
 created mostly to work around ssh_authorized_keys not being able to purge old keys.
