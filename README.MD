@@ -21,9 +21,9 @@ This module has been tested on Ubuntu though it is intended to work on any Unix/
 
 ## Example Usage
 
-### Managing Keys
+#### Managing Keys in Hash
 
-``` puppet
+``` 
 include ssh_keys
 
 ssh_keys::user{'foo':
@@ -36,20 +36,7 @@ ssh_keys::authorized_key{'foo-laptop':
 }
 ```
 
-### In Hiera Format
-Add this in site.pp
-```
-hiera_include('classes')
-
-node default {
-  $mysshkeyuser = hiera('ssh_keys::user', {})
-  create_resources('ssh_keys::user', $mysshkeyuser)
-
-  $mysshkeyauthkey = hiera('ssh_keys::authorized_key', {})
-  create_resources('ssh_keys::authorized_key', $mysshkeyauthkey)
-}
-
-```
+#### Managing Keys in Hiera
 
 hieradata/nodes/dummy.example.com.yaml
 ```
